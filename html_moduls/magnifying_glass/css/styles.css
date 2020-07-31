@@ -1,0 +1,104 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/**/
+.pre_loader_perc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  font-family: "digital";
+}
+.pre_loader_perc .loader {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  width: 100%;
+  font-size: 50px;
+}
+.pre_loader_perc .loader .container_strip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -3px 20px;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem {
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem .strip_elemnt {
+  -webkit-transition: height 0.2s ease;
+  -o-transition: height 0.2s ease;
+  transition: height 0.2s ease;
+  height: 3px;
+  background: #F5F5F5;
+}
+.pre_loader_perc .loader .container_strip .container_strip_elem {
+  vertical-align: bottom;
+  color: #F5F5F5;
+  margin: 0 3px;
+  height: 45px;
+}
+.pre_loader_perc .loader .loader_persentage {
+  color: #F5F5F5;
+}
+.pre_loader_perc.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/back_1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container .magn {
+  position: absolute;
+  top: -1000px;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: url("../img/back_1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-box-shadow: 20px 0 100px rgba(0, 0, 0, 0.5), 20px 0 101px rgba(0, 0, 0, 0.5);
+  box-shadow: 20px 0 100px rgba(0, 0, 0, 0.5), 20px 0 101px rgba(0, 0, 0, 0.5);
+  background-size: 150vw;
+}

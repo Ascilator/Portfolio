@@ -1,0 +1,92 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/**/
+.pre_loader_perc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #1E90FF;
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s linear;
+  font-family: "digital";
+}
+.pre_loader_perc .loader {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate(0%, -50%);
+  width: 100%;
+  font-size: 50px;
+}
+.pre_loader_perc .loader .container_strip {
+  display: flex;
+  justify-content: center;
+  margin: 0 -3px 20px;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem .strip_elemnt {
+  transition: height 0.2s ease;
+  height: 3px;
+  background: #FFFFFF;
+}
+.pre_loader_perc .loader .container_strip .container_strip_elem {
+  vertical-align: bottom;
+  color: #FFFFFF;
+  margin: 0 3px;
+  height: 45px;
+}
+.pre_loader_perc .loader .loader_persentage {
+  color: #FFFFFF;
+}
+.pre_loader_perc.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  overflow: hidden;
+  filter: contrast(70);
+}
+.container span {
+  cursor: move;
+  width: 120px;
+  height: 120px;
+  filter: blur(25px);
+  background: #000;
+  display: inline-block;
+  border-radius: 50%;
+  animation: ascilating 5s ease-in-out infinite;
+}
+
+@keyframes ascilating {
+  0%, 100% {
+    margin: 10px;
+  }
+  50% {
+    margin: -60px;
+  }
+}
