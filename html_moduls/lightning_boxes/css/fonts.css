@@ -1,0 +1,19 @@
+
+@font-face{
+  font-family: 'digital';
+  src: url('../fonts/5015.ttf')  format('truetype');
+  font-weight: normal; 
+  font-style: normal; 
+}
+@font-face{
+  font-family: 'hand';
+  src: url('../fonts/19558.ttf')  format('truetype');
+  font-weight: normal; 
+  font-style: normal; 
+}
+@font-face{
+  font-family: 'hand_2';
+  src: url('../fonts/11654.ttf')  format('truetype');
+  font-weight: normal; 
+  font-style: normal; 
+}

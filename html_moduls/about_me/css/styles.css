@@ -1,0 +1,243 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #9DAEAF;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "digital";
+  src: url("../fonts/5015.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/**/
+.pre_loader_perc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #093536;
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s linear;
+  font-family: "digital";
+}
+.pre_loader_perc .loader {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate(0%, -50%);
+  width: 100%;
+  font-size: 50px;
+}
+.pre_loader_perc .loader .container_strip {
+  display: flex;
+  justify-content: center;
+  margin: 0 -3px 20px;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem .strip_elemnt {
+  transition: height 0.2s ease;
+  height: 3px;
+  background: #F5F5F5;
+}
+.pre_loader_perc .loader .container_strip .container_strip_elem {
+  vertical-align: bottom;
+  color: #F5F5F5;
+  margin: 0 3px;
+  height: 45px;
+}
+.pre_loader_perc .loader .loader_persentage {
+  color: #F5F5F5;
+}
+.pre_loader_perc.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/**/
+.main_screen {
+  background: #093536;
+  width: 100%;
+  height: 100vh;
+}
+.main_screen .logo {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #9DAEAF;
+}
+.main_screen .logo .part_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(45%);
+}
+.main_screen .version {
+  color: #30626B;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 800px;
+  margin: 0 auto;
+}
+.wrapper .head_part {
+  margin-bottom: 5%;
+}
+.wrapper .head_part .my_greetings {
+  font-size: 25px;
+  margin-bottom: 7%;
+}
+.wrapper .head_part .my_desc {
+  font-size: 15px;
+  line-height: 1.4;
+  position: relative;
+}
+.wrapper .head_part .my_desc p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.wrapper .head_part .my_desc:after {
+  content: "Инфо.";
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  left: -15px;
+  font-size: 14px;
+  color: #30626B;
+  transform: translate(-100%, 0%);
+  line-height: 28px;
+}
+.wrapper .site_item {
+  margin: 0 auto;
+  width: 100%;
+}
+.wrapper .site_item .site_box {
+  text-decoration: none;
+  margin: 5px 0;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  letter-spacing: 0.6px;
+}
+.wrapper .site_item .site_box .finger {
+  margin-right: 10px;
+  color: #fff8;
+  margin-left: 3px;
+}
+.wrapper .site_item .site_box .name_of_site {
+  color: #fff9;
+  text-decoration: none;
+}
+.wrapper .site_item .site_box:hover .finger {
+  margin-right: 10px;
+  color: #fff9;
+  margin-left: 3px;
+}
+.wrapper .site_item .site_box:hover .name_of_site {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back_item {
+  margin: 20px auto 0;
+  width: 250px;
+}
+.back_item .site_box {
+  text-decoration: none;
+  background: #116062;
+  padding: 5px 0;
+  border: 2px solid #fff9;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  letter-spacing: 0.6px;
+}
+.back_item .site_box .finger {
+  margin-right: 10px;
+  color: #fff8;
+  margin-left: 3px;
+}
+.back_item .site_box .name_of_site {
+  color: #fff;
+  text-decoration: none;
+}
+.back_item .site_box:hover {
+  background: #1FCECB;
+}
+.back_item .site_box:hover:before {
+  left: 100%;
+}
+.back_item .site_box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  transition: 0.4s;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 20px;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+.footer .left_part {
+  color: #30626B;
+  transition: 0.4s;
+}
+.footer .left_part:hover {
+  filter: brightness(200%);
+}
+.footer .right_part {
+  display: flex;
+}
+.footer .right_part a {
+  text-decoration: none;
+  color: #30626B;
+  transition: 0.4s;
+}
+.footer .right_part a:hover {
+  filter: brightness(200%);
+}
+.footer .right_part .telegram {
+  margin: 0 20px;
+}

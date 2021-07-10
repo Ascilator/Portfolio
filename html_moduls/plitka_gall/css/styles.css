@@ -1,0 +1,261 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #000;
+  /*  min-height: 100vh;
+  background: #2F4F4F url('../img/finale_variant/back.png');
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: .3s;
+  &.active_body{
+  background: rgba(0,0,0,.9);
+  transition: .3s;
+  }*/
+}
+
+/**/
+.pre_loader_perc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  font-family: "digital";
+}
+.pre_loader_perc .loader {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  width: 100%;
+  font-size: 50px;
+}
+.pre_loader_perc .loader .container_strip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -3px 20px;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem {
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.pre_loader_perc .loader .container_strip ._strip_elem .strip_elemnt {
+  -webkit-transition: height 0.2s ease;
+  -o-transition: height 0.2s ease;
+  transition: height 0.2s ease;
+  height: 3px;
+  background: #F5F5F5;
+}
+.pre_loader_perc .loader .container_strip .container_strip_elem {
+  vertical-align: bottom;
+  color: #F5F5F5;
+  margin: 0 3px;
+  height: 45px;
+}
+.pre_loader_perc .loader .loader_persentage {
+  color: #F5F5F5;
+}
+.pre_loader_perc.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/**/
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.container .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 7% 0%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.container .gallery .gallery_item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 300px;
+  flex: 0 0 300px;
+  margin: 10% 5%;
+}
+.container .gallery .gallery_item .card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+.container .gallery .gallery_item .card .front_side {
+  padding: 20px 20px 40px;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004);
+}
+.container .gallery .gallery_item .card .front_side img {
+  height: 100%;
+  padding-right: 2.5%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: -50px 0;
+  object-position: -50px 0;
+}
+.container .gallery .gallery_item .card .front_side .on_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: #fff;
+}
+.container .gallery .gallery_item .card .front_side .on_img._right {
+  left: unset;
+  top: 0;
+  right: 0;
+}
+.container .gallery .gallery_item .card .back_side {
+  position: absolute;
+  padding: 20px 20px 40px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.container .gallery .gallery_item .card .back_side .back {
+  background: #000;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.container .gallery .gallery_item .card .back_side .back .text {
+  width: 80%;
+  margin-top: 1em;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(50px);
+  transform: translateZ(50px);
+  font-family: "hand_2";
+  font-style: italic;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.container .gallery .gallery_item .card .back_side .back .suptext {
+  font-family: "hand_2";
+  font-size: 25px;
+  width: 80%;
+  text-align: right;
+  font-style: italic;
+  font-weight: bold;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.container .gallery .gallery_item .card:hover .front_side {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.container .gallery .gallery_item .card:hover .back_side {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
